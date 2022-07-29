@@ -59,9 +59,6 @@ if cython_spec is None:
 else:
     import Cython
     cython_ver = parse_version(Cython.__version__)
-    if cython_ver != parse_version('0.29.20'):
-        raise warnings.warn('Kaolin requires cython == 0.29.20, '
-                            f'but found version {Cython.__version__} instead.')
 
 numpy_spec = importlib.util.find_spec("numpy")
 
